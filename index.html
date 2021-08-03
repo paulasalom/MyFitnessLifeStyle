@@ -1,765 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+	Fox by FreeHTML5.co
+	Twitter: https://twitter.com/fh5co
+	Facebook: https://fb.com/fh5co
+	URL: https://freehtml5.co
+-->
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Fox - Free One Page Template, Free Fitness HTML5 Template by FreeHTML5.co</title>
 
-<html>
-  <head>
-    <title>Pet Shops</title>
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ficheros css (revisar para juntarlo todo en 1) -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    
-    <!--Google Fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Duru+Sans|Actor' rel='stylesheet' type='text/css'>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  </head>
-  <body>
- <!-- pequeña ventana donde recogemos info del Json. Lo escondemos con display none. control nativo de html-->
-  <iframe id="contenidoDelJson" width="350" height="250" style="display:none" src="https://mallorca-animals-tm.neocities.org/JSON/tiendas.json">
-  </iframe>
-    <!-- Barra de navegación en cabecera-->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-        <img src='https://mallorca-animals-tm.neocities.org/img/Paw_Print.svg' width='40px'>
-          <!-- Logotipo a la izq. Si clickas sobre él vuelve a home-->
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar" href="index.html"></span>
-            <span class="icon-bar" href="index.html"></span>
-            <span class="icon-bar" href="index.html"></span>
-          </button>
-          <a class="navbar-brand" href="index.html"><span class="green">Pet</span> Shops</a>
+  <!-- Bootstrap CSS -->
+  <link href="css/animate.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container-fluid pl-0 pr-0 bg-img clearfix parallax-window2" data-parallax="scroll" data-image-src="images/banner2.jpg">
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container"> 
+      <!-- Brand --> 
+      <a class="navbar-brand mr-auto" href="#"><img src="images/logo.png" alt="FoxPro" /></a> 
+      
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <span class="navbar-toggler-icon"></span> </button>
+      
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="#">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#about-us">About</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Courses</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#contact">Contact</a> </li>
+        </ul>
+        <ul class="navbar-nav ml-5">
+          <li class="nav-item"> <a class="nav-link btn btn-danger" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="fh5co-banner-text-box">
+      <div class="quote-box pl-5 pr-5 wow bounceInRight">
+        <h2> FREE TEMPLATE <br><span>BY FREEHTML5.CO</span> </h2>
+      </div>
+      <a href="#" class="btn text-uppercase btn-outline-danger btn-lg mr-3 mb-3 wow bounceInUp"> What's new</a> <a href="#" class="btn text-uppercase btn-outline-danger btn-lg mb-3 wow bounceInDown"> Courses</a> </div>
+  </div>
+</div>
+<div class="container-fluid fh5co-network">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4 class="wow bounceInUp">FOR NETWORK</h4>
+        <h2 class="wow bounceInRight">MEMBERS</h2>
+        <hr />
+        <h5 class="wow bounceInLeft">NETWORK SUMMER 2017</h5>
+        <p class="wow bounceInDown">The lowdown on Blood Flow Restriction training • FREE CEC/CPD • ​Let's compare ​Raw Vs Cooked • Building Ab, Core &amp; Pelvic strength • Get​ clients short-term wins from long-term goals • So you want to operate multiple clubs? + LOADS MORE</p>
+      </div>
+      <div class="col-md-6">
+        <figure class="wow bounceInDown"> <img src="images/about-img.jpg" alt="gym" class="img-fluid" /> </figure>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="about-us" class="container-fluid fh5co-about-us pl-0 pr-0 parallax-window" data-parallax="scroll" data-image-src="images/about-us-bg.jpg">
+  <div class="container">
+    <div class="col-sm-6 offset-sm-6">
+      <h2 class="wow bounceInLeft" data-wow-delay=".25s">ABOUT US</h2>
+      <hr/>
+      <p class="wow bounceInRight" data-wow-delay=".25s">Trainers, athletes and serious clients alike are looking for the toughest, most brutally productive training techniques to spice up their workouts and provide a truly unique challenge for their body and mind. Think: one-arm push-ups, pistols, pull-ups, handstands, hanging levers and the like! If you want toeither for </p>
+      <a class="btn btn-lg btn-outline-danger d-inline-block text-center mx-auto wow bounceInDown">Learn More</a> </div>
+  </div>
+</div>
+<div class="container-fluid fh5co-content-box">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 pr-0"><img src="images/rode-gym.jpg" alt="gym" class="img-fluid wow bounceInLeft" /> </div>
+      <div class="col-md-7 pl-0">
+        <div class="wow bounceInRight" data-wow-delay=".25s">
+          <div class="card-img-overlay">
+            <p>Great weekend, met lots of cool people and took away quite a bit. Thank you for the experience, and to you and your professional team for 
+              making things seem </p>
+          </div>
+          <img src="images/gym-girls.jpg" alt="girls in gym" class="img-fluid" /> </div>
+      </div>
+    </div>
+    <div class="row trainers pl-0 pr-0">
+      <div class="col-12 bg-50">
+        <div class="quote-box2 wow bounceInDown" data-wow-delay=".25s">
+          <h2> TRAINERS </h2>
         </div>
-        <!-- Titulos menus derecha-->
-        <nav role="navigation" class="collapse navbar-collapse navbar-right">
-          <ul class="navbar-nav nav">
-          <!-- Página principal "home"-->
-            <li class="active"><a href="index.html">Home</a></li>
-            <!-- Desplegable para poder ir directamente a 3 tiendas (las más importante p.e.)-->
-            <li class="dropdown">
-              <a data-toggle="dropdown" href="#" class="dropdown-toggle">Tiendas Destacadas<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Tienda 1</a></li>
-                <li><a href="#">Tienda 2</a></li>
-                <li><a href="#">Tienda 3</a></li>
-              </ul>
-            </li>
-            <!-- menú para ir a página búsqueda veterinarios o tema relacionado animales de otro grupo-->
-            <li><a href="actividades.html">Actividades</a></li>
+      </div>
+      <div class="col-md-6 pr-5 pl-5">
+        <div class="card text-center wow bounceInLeft" data-wow-delay=".25s"> <img class="card-img-top rounded-circle img-fluid" src="images/trainers1.jpg" alt="Card image">
+          <div class="card-body mb-5">
+            <h4 class="card-title">JENIFERR</h4>
+            <p class="card-text">Trainers, athletes and serious clients alike are looking for the toughest, most brutally productive training techniques to spice up their workouts and provide a truly unique challenge</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 pl-5 pr-5">
+        <div class="card text-center wow bounceInRight" data-wow-delay=".25s"> <img class="card-img-top rounded-circle img-fluid" src="images/trainers2.jpg" alt="Card image">
+          <div class="card-body mb-5">
+            <h4 class="card-title">JHON</h4>
+            <p class="card-text">Trainers, athletes and serious clients alike are looking for the toughest, most brutally productive training techniques to spice up their workouts and provide a truly unique challenge</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row gallery">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body mb-4 wow bounceInLeft" data-wow-delay=".25s">
+            <h4 class="card-title">FILEX</h4>
+            <p class="card-text">I just wanted to sincerely thank you for the opportunity to represent Precision Nutrition and the US at such an amazing event. </p>
+          </div>
+          <img class="card-img-top img-fluid wow bounceInRight" data-wow-delay=".25s" src="images/g1.jpg" alt="Card image"> </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card"> <img class="card-img-top img-fluid wow bounceInUp" data-wow-delay=".25s" src="images/g2.jpg" alt="Card image">
+          <div class="card-body mt-4 wow bounceInDown" data-wow-delay=".25s">
+            <h4 class="card-title">IGNITING</h4>
+            <p class="card-text">I just wanted to sincerely thank you for the opportunity to represent Precision Nutrition and the US at such an amazing event. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body mb-4 wow bounceInRight" data-wow-delay=".25s">
+            <h4 class="card-title">PASSION</h4>
+            <p class="card-text">I just wanted to sincerely thank you for the opportunity to represent Precision Nutrition and the US at such an amazing event. </p>
+          </div>
+          <img class="card-img-top img-fluid wow bounceInLeft" data-wow-delay=".25s" src="images/g3.jpg" alt="Card image"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 footer1 d-flex wow bounceInLeft" data-wow-delay=".25s">
+        <div class="d-flex flex-wrap align-content-center"> <a href="#"><img src="images/logo.png" alt="logo" /></a>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+            dolor. Ae</p>
+          <p>&copy; 2018 Foxpro. All rights reserved.<br> Design by <a href="https://freehtml5.co" target="_blank">FreeHTML5</a>.</p>
+        </div>
+      </div>
+      <div class="col-md-6 footer2 wow bounceInUp" data-wow-delay=".25s" id="contact">
+        <div class="form-box">
+          <h4>CONTACT US</h4>
+          <table class="table table-responsive d-table">
+            <tr>
+              <td><input type="text" class="form-control pl-0" placeholder="NAME" /></td>
+              <td><input type="email" class="form-control pl-0" placeholder="EMAIL" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="text" class="form-control pl-0" placeholder="ADDRESS" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="text" class="form-control pl-0" placeholder="MESSAGES" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="text-center pl-0"><button type="submit" class="btn btn-dark">SEND</button></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="col-md-3 footer3 wow bounceInRight" data-wow-delay=".25s">
+        <h5>ADDRESS</h5>
+        <p>Lorem ipsum dolor sit 
+          amet, consectetuer adipiscing elit.</p>
+        <h5>PHONE</h5>
+        <p>253232323232</p>
+        <h5>EMAIL</h5>
+        <p>email@example.com</p>
+        <div class="social-links">
+          <ul class="nav nav-item">
+            <li><a href="https://www.facebook.com/fh5co" class="btn btn-secondary mr-1 mb-2"><img src="images/facebook.png" alt="facebook" /></a></li>
+            <li><a href="#"  class="btn btn-secondary mr-1 ml-1 mb-2"><img src="images/facebook.png" alt="facebook" /></a></li>
+            <li><a href="#"  class="btn btn-secondary mr-1 ml-1 mb-2"><img src="images/facebook.png" alt="facebook" /></a></li>
+            <li><a href="#"  class="btn btn-secondary ml-1 mb-2"><img src="images/facebook.png" alt="facebook" /></a></li>
           </ul>
-        </nav>
-      </div>
-    </div>
-    
-    <!-- Carousel -->
-    <div class="jumbotron">
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Cantidad de slides -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-        <!-- Imagenes de las slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src="img/img3.jpg" alt="">
-            <div class="carousel-caption">
-            </div>
-          </div>
-          <div class="item">
-            <img src="img/animales3.jpg" alt="">
-            <div class="carousel-caption">
-            </div>
-          </div>
-          <div class="item">
-            <img src="img/animales1.jpg" alt="">
-            <div class="carousel-caption">
-            </div>
-          </div>
-        </div>
-        <!-- Controles del carousel (flechas y circulitos para cambiar foto) -->
-        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-      </div>
-    </div>
-    
-    <!-- Buscador por filtros -->
-    <div class="site-section site-section-sm pb-0">
-      <div class="container">
-        <div class="row">
-          <form class="form-search col-md-12" style="margin-top: -100px;">
-            <div class="row  align-items-end">
-              <div class="col-md-3">
-                <label for="list-types">Tipo servicio</label>
-                <div class="select-wrap">
-                  <span class="icon icon-arrow_drop_down"></span>
-                  <select name="list-types" id="list-types" class="form-control d-block rounded-0">
-                    <option value="Venta">Venta</option>
-                    <option value="Peluqueria">Peluquería</option>
-                    <option value="Adiestramiento">Adiestramiento</option>
-                    <option value="Alimentacion">Alimentación</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <label for="offer-types">Valoración Media</label>
-                <div class="select-wrap">
-                  <span class="icon icon-arrow_drop_down"></span>
-                  <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
-                    <option value="1-2">1-2 Estrellas</option>
-                    <option value="3-4">3-4 Estrellas</option>
-                    <option value="5">5 Estrellas</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <label for="select-city">Población</label>
-                <div class="select-wrap">
-                  <span class="icon icon-arrow_drop_down"></span>
-                  <select name="select-city" id="select-city" class="form-control d-block rounded-0">
-                    <option value="Palma">Palma</option>
-                    <option value="Llucmayor">Llucmayor</option>
-                    <option value="Manacor">Manacor</option>
-                    <option value="Andratx">Andratx</option>
-                    <option value="Alcudia">Alcúdia</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-3">
-              <label for="select-city">Buscar</label>
-                <input type="submit" id="buscarId" class="btn btn-success text-white btn-block rounded-0" value="Buscar">
-              </div>
-            </div>
-          </form>
-        </div>  
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="view-options bg-white py-3 px-3 d-md-flex align-items-center">
-              <div class="mr-auto">
-                <a href="index.html" class="icon-view view-module active"><span class="icon-view_module"></span></a>
-                <a href="view-list.html" class="icon-view view-list"><span class="icon-view_list"></span></a>
-                <div class="select-wrap">
-                  <span class="icon icon-arrow_drop_down"></span>
-                  <select id="ordenId" class="form-control form-control-sm d-block rounded-0">
-                    <option value="Ordenar">Ordenar por</option>
-                    <option value="Ascendente">Precio Ascendente</option>
-                    <option value="Descendente">Precio Descendente</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-       
-      </div>
-    </div>
-    
-    <!-- Thumbnails -->
-    <div class="containerTiendas">    
-    <div class="container thumbs">    
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="img/tiendaanimal.jpg" alt="" class="img-circle">
-          <div class="caption">
-            <h2 class="text-center">Tienda Animal</h2>
-            <p><FONT SIZE=2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</font></p>
-            <h4><strong>Valoración: </strong></h4><img src="">       
-            <h4><strong>Precio: </strong></h4><h4><strong>&euro;&euro;&euro;&euro;</strong></h4>
-            <div class="btn-toolbar text-center">
-              <a href="tienda.html" role="button" class="btn btn-success">Detalles</a>
-            </div>
-          </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="img/canyplant.jpg" alt="" class="img-circle">
-          <div class="caption">
-            <h2 class="text-center">Canyplant</h2>
-            <p><FONT SIZE=2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</font></p>
-            <h4><strong>Valoración: </strong></h4><img src="">       
-            <h4><strong>Precio: </strong></h4><h4><strong>&euro;&euro;-&euro;&euro;&euro;</strong></h4>
-            <div class="btn-toolbar text-center">
-              <a href="tienda.html" role="button" class="btn btn-success">Detalles</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="img/peludets.jpg" alt="" class="img-circle">
-          <div class="caption">
-            <h2 class="text-center">Peludets</h2>
-            <p><FONT SIZE=2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</font></p>
-            <h4><strong>Valoración: </strong></h4><img src="">       
-            <h4><strong>Precio: </strong></h4><h4><strong>&euro;&euro;</strong></h4>
-            <div class="btn-toolbar text-center">
-              <a href="tienda.html" role="button" class="btn btn-success">Detalles</a>
-            </div>
-          </div>
-        </div>
-      
-      </div>
-    <div><a id="masTiendasId" onmousemove="copiatienda(this);" href="#" 
-    style="font-size:2.5em">Mas resultados </a> </div>
-    
     </div>
+  </div>
+</footer>
 
-    </div>
-    <div class="text-center">
-   <a class="twitter-timeline" style="width: 50%;display: block;margin-left: auto;margin-right: auto;" data-lang="es" data-width="450" data-height="300" href="https://twitter.com/RoyalCanin_Es?ref_src=twsrc%5Etfw">Tweets by RoyalCanin_Es</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-   </div>
-       <main class="row">
-      <div class="container font-family: Nunito; font-size: 1.5rem; text-center">
-        <header>
-          <h1>Visualizador de razas</h1>
-          <select class="breeds" style="font-family: Nunito; font-size: 1.5rem;"></select>
-        </header>
-      </div>
-      <div class="img-container" style="width: 50%;display: block;margin-left: auto;margin-right: auto;">
-        <div class="container">
-          <div class="spinner">
-          🐶
-          </div>
-          <img
-            src="http://placecorgi.com/260/180"
-            class="dog-img show"
-          />
-        </div>
-      </div>
-      
-    </main>
-    <br>
-    <div class="form-row text-center">
-    <a href="https://github.com/jigsawpieces/dog-api-images#dog-api-images" target="_blank" class="btn btn-success" role="button">Añade fotos de tu perro!</a>
-    </div>
-    <br>
-    <br>
-    <!-- prefooter -->
-    <div class="text-center">
-      <h3 class="text-center">Bienvenidos a Pet Shops</h3>
-      <br>
-      <p><FONT SIZE=2 style="padding-left:5px;">Somos tres estudiantes de la universidad de Les Illes Balears amantes de los animales y hemos creado esta página para poder encontrar más fácilmente una tienda de animales en nuestra isla! Esperemos que sea de utilidad para todos aquellos que tengais un pequeño amigo en casa...</font></p>
-          <a style="color: #3b5998;" href="http://facebook.es" role="button"
-  ><i class="fab fa-facebook-f fa-3x"></i
-></a>
+<!-- Optional JavaScript --> 
+<!-- jQuery first, then Bootstrap JS, ... -->
 
-<!-- Twitter -->
-<a style="color: #55acee;" href="http://twitter.es" role="button"
-  ><i class="fab fa-twitter fa-3x"></i
-></a>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/main.js"></script>
 
-<!-- Google -->
-<a style="color: #dd4b39;" href="http://google.es" role="button"
-  ><i class="fab fa-google fa-3x"></i
-></a>
-
-<!-- Instagram -->
-<a style="color: #ac2bac;" href="http://instagram.com" role="button"
-  ><i class="fab fa-instagram fa-3x"></i
-></a>
-<!-- Facebook -->
-
-        <p>&copy; 2021 Pet Shops. All Rights Reserved. Proudly created by <a class="green" href="https://mallorca-animals-tm.neocities.org">Grupo10.com</a></p>
-    </div><!-- End Content -->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- // <script src="https://code.jquery.com/jquery.js"></script> -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery2.js"></script>
-    <!--<script src="js/funciones.js"></script>-->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-     <script src="js/core.min.js"></script>
-     
-
-<script>
-var contenidoJson=''; //variable global con todo el contenido de nuestro JSON
-var resultadoBusqueda=[]; //vector con resultados obtenidos en la busqueda
-var preciosBusqueda=[];
-var ordenMejores=[];
-var ultimaPosicionAgregada=0;//ultima posicion de elemento de linea de tiendas  
-let timer="";
-let deleteFirstPhotoDelay="";
-
-var cantiDadEuros='';
-
-
-function alIniciar(){
-  document.getElementsByClassName('container thumbs')[0].
-            getElementsByTagName('a')[3].style.visibility='hidden';
-            
-document.getElementsByClassName('container thumbs')[0].style.visibility='hidden';
-            appDog();
-  }
-
-window.onload=function(){ //Detecta cuando la ventana terminó de cargar todo el html
-  var elContenido=extraeContenidoDeFrame(); //llamada del frame con el texto
-  contenidoJson=JSON.parse(elContenido); //Lo convertimos a JSON
-  tresMejoresTiendas();
-  alIniciar();
-  }
-  
-function extraeContenidoDeFrame(){ //definicion
-var miFrame=document.getElementById("contenidoDelJson");
-//poder manipular el elemento de la página html con el Id indicado
-var contenido=miFrame.contentWindow.document.body.innerText;
-//innertext devuelve solo el texto sin tags del html
-return contenido;
-}
-//---------------------------------------------------------------------------
-
-function tresMejoresTiendas(){ //definicion
-var mejor=document.getElementsByClassName('dropdown-menu');
-ordenMejores.push(contenidoJson[0]); //del conjunto resultante de la busqueda, ordenamos por precio
-var elimina=ordenMejores[0]['nom']; //quitar el de referencia para que no se repita en el array ordenado
-var x=0,y=0;
-for(y=0;y<contenidoJson.length;y++){ //con referencia el primer resultado, 
-          // vamos mirando la valoracion de los que van llegando y se van comparando para ordenarlo
-  for(x=0;x<ordenMejores.length;x++){
-    if(parseInt(contenidoJson[y]['dadesPropies']['valoracio'])>=parseInt(ordenMejores[x]['dadesPropies']['valoracio'])){
-     ordenMejores.splice(x,0,contenidoJson[y]); //en el indice c, borramos 0 info, metemos la valoracion nueva
-     break;
-     }
-     }//cierre for c
-     if(x>=ordenMejores.length){ //si no es mÃ¡s grande que ninguno, se pondrÃ¡ al final del array
-      ordenMejores.push(contenidoJson[y]);
-      }
-      }//cierre for i
-      for(y=0;y<ordenMejores.length;y++){
-      if(ordenMejores[y]['nom']==elimina){
-      ordenMejores.splice(y,1); //borramos la tienda repetida de referencia
-      break;
-                }
-              }
-        var nombreTienda1=ordenMejores[0]['nom']; //nombre tienda
-        var nombreTienda2=ordenMejores[1]['nom'];
-        var nombreTienda3=ordenMejores[2]['nom'];
-        
-mejor[0].childNodes[1].childNodes[0].innerText=nombreTienda1;
-mejor[0].childNodes[3].childNodes[0].innerText=nombreTienda2;
-mejor[0].childNodes[5].childNodes[0].innerText=nombreTienda3;
-            //descripcion=ordenMejores[c]['descripcio']; //descripcion
-mejor[0].childNodes[1].childNodes[0].setAttribute('href','tienda.html?name='+ordenMejores[0]['nom']+'&descripcion='+ordenMejores[0]['descripcio']+'&coordenadas='+ordenMejores[0]["geoposicionament"][0]['geoposicionament1']['lat']+','+ordenMejores[0]["geoposicionament"][0]['geoposicionament1']['long']+'&direccion='+ordenMejores[0]["geoposicionament"][0]['geoposicionament1']['address']+'&telefono='+ordenMejores[0]["contacte"]["telf"]+'&email='+ordenMejores[0]["contacte"]["email"]+'&horariolv='+ordenMejores[0]["horari"]["di"][0]["in"]+','+ordenMejores[0]["horari"]["di"][0]["out"]+'&horariosb='+ordenMejores[0]["horari"]["ds"][0]["in"]+','+ordenMejores[0]["horari"]["ds"][0]["out"]+'&horariodm='+ordenMejores[0]["horari"]["dg"][0]["in"]+','+ordenMejores[0]["horari"]["dg"][0]["out"]+'&foto='+ordenMejores[0]['imatges'][0]+','+ ordenMejores[0]['imatges'][1]);
-mejor[0].childNodes[3].childNodes[0].setAttribute('href','tienda.html?name='+ordenMejores[1].nom+'&descripcion='+ordenMejores[1]['descripcio']+'&coordenadas='+ordenMejores[1]["geoposicionament"][0]['geoposicionament1']['lat']+','+ordenMejores[1]["geoposicionament"][0]['geoposicionament1'].long+'&direccion='+ordenMejores[1]["geoposicionament"][0]['geoposicionament1'].address+'&telefono='+ordenMejores[1]["contacte"].telf+'&email='+ordenMejores[1]["contacte"].email+'&horariolv='+ordenMejores[1]["horari"]["di"][0]["in"]+','+ordenMejores[1]["horari"]["di"][0]["out"]+'&horariosb='+ordenMejores[1]["horari"]["ds"][0]["in"]+','+ordenMejores[1]["horari"]["ds"][0]["out"]+'&horariodm='+ordenMejores[1]["horari"]["dg"][0]["in"]+','+ordenMejores[1]["horari"]["dg"][0]["out"]+'&foto='+ordenMejores[1]['imatges'][0]+','+ ordenMejores[1]['imatges'][1]);
-mejor[0].childNodes[5].childNodes[0].setAttribute('href','tienda.html?name='+ordenMejores[2].nom+'&descripcion='+ordenMejores[2]['descripcio']+'&coordenadas='+ordenMejores[2]["geoposicionament"][0]['geoposicionament1']['lat']+','+ordenMejores[2]["geoposicionament"][0]['geoposicionament1'].long+'&direccion='+ordenMejores[2]["geoposicionament"][0]['geoposicionament1'].address+'&telefono='+ordenMejores[2]["contacte"].telf+'&email='+ordenMejores[2]["contacte"].email+'&horariolv='+ordenMejores[2]["horari"]["di"][0]["in"]+','+ordenMejores[2]["horari"]["di"][0]["out"]+'&horariosb='+ordenMejores[2]["horari"]["ds"][0]["in"]+','+ordenMejores[2]["horari"]["ds"][0]["out"]+'&horariodm='+ordenMejores[2]["horari"]["dg"][0]["in"]+','+ordenMejores[2]["horari"]["dg"][0]["out"]+'&foto='+ordenMejores[2]['imatges'][0]+','+ ordenMejores[2]['imatges'][1]);
-}
-
-
-//--------------------------------------------------------------------
-var ordenados=[]; //array con precios ordenados
-$('#ordenId').change(function(){ //coge la opcion clickada entre precio ascen y descen
-  var elementoElegido='';
-  elementoElegido=document.getElementById('ordenId').value;
-  if(elementoElegido!='Ordenar'){ //La opcion ordenar es la predete. que no hace nada
-    if(resultadoBusqueda.lenght==0){ //si no hay resultados en la busqueda, se informa
-      alert('No hay resultados de busqueda');
-      }else{
-        ordenados=[];
-        borrarTiendasDebajodefila1();
-        ultimaPosicionAgregada=2;
-  numeroFilaTiendas=0;
-        if(elementoElegido=='Descendente'){
-          ordenados.push(resultadoBusqueda[0]); //del conjunto resultante de la busqueda, ordenamos por precio
-          var nombreAEliminar=ordenados[0]['nom']; //quitar el de referencia para que no se repita en el array ordenado
-          var c=0,i=0;
-          for(i=0;i<resultadoBusqueda.length;i++){ //con referencia el primer resultado, 
-          // vamos mirando el precio de los que van llegando y se van comparando para ordenarlo
-            for(c=0;c<ordenados.length;c++){
-              if(parseInt(resultadoBusqueda[i]['preu']['import'])>=parseInt(ordenados[c]['preu']['import'])){
-                ordenados.splice(c,0,resultadoBusqueda[i]); //en el indice c, borramos 0 info, metemos el precio nuevo
-                break;
-                }
-              }//cierre for c
-              if(c>=ordenados.length){ //si no es más grande que ninguno, se pondrá al final del array
-                ordenados.push(resultadoBusqueda[i]);
-                }
-            }//cierre for i
-            for(i=0;i<ordenados.length;i++){
-              if(ordenados[i]['nom']==nombreAEliminar){
-                ordenados.splice(i,1); //borramos la tienda repetida de referencia
-                break;
-                }
-              }
-          }else{ //---------------------ASCENDENTE
-            ordenados.push(resultadoBusqueda[0]); //del conjunto resultante de la busqueda, ordenamos por precio
-            var nombreAEliminar=ordenados[0]['nom'];
-          var c=0,i=0;
-          for(i=0;i<resultadoBusqueda.length;i++){ //con referencia el primer resultado, 
-          // vamos mirando el precio de los que van llegando y se van comparando para ordenarlo
-            for(c=0;c<ordenados.length;c++){
-              if(parseInt(resultadoBusqueda[i]['preu']['import'])<=parseInt(ordenados[c]['preu']['import'])){
-                ordenados.splice(c,0,resultadoBusqueda[i]); //en el indice c, borramos 0 info, metemos el precio nuevo
-                break;
-                }
-              }//cierre for c
-              if(c>=ordenados.length){ //si no es más grande que ninguno, se pondrá al final del array
-                ordenados.push(resultadoBusqueda[i]);
-                }
-            }//cierre for i
-             for(i=0;i<ordenados.length;i++){
-              if(ordenados[i]['nom']==nombreAEliminar){
-                ordenados.splice(i,1); //borramos la tienda repetida de referencia
-                break;
-                }
-              }
-            }
-         
-       var z=0;
-       for(z=0;z<3;z++){
-         tiendas=document.getElementsByClassName('col-sm-6 col-md-4'); //indicamos clase donde salen resultados
-         //nombre
-  tiendas[z].childNodes[1].
-  childNodes[3].childNodes[1].innerHTML=ordenados[z]['nom'];
-  
-  //foto tienda
-  tiendas[z].childNodes[1].
-  childNodes[1].setAttribute('src',
-  ordenados[z]['imatges'][0]);
-  
-   //descripcion  
-  tiendas[z].childNodes[1].childNodes[3].
-  childNodes[3].childNodes[0].innerHTML=ordenados[z]['descripcio'];
-  
-  
-  cantiDadEuros=''; //inicializar variable
-            for(x=1;x<=parseInt(ordenados[z]['preu']['import']);x++){ //segun cantidad importe, cantidad de simbolos euro
-            cantiDadEuros=cantiDadEuros+'€';  
-              }         
-            tiendas[z].childNodes[1].childNodes[3].childNodes[9].
-            childNodes[0].innerHTML=cantiDadEuros; //cantidad euros
-  
-  tiendas[z].childNodes[1].childNodes[3].childNodes[6].
-  setAttribute('src','img/'+ordenados[z]['dadesPropies']['valoracio']+
-            'estrella.png');
-  
-  tiendas[z].childNodes[1].childNodes[3].childNodes[11].childNodes[1].setAttribute('href','tienda.html?name='+ordenados[z].nom+'&descripcion='+ordenados[z]['descripcio']+'&coordenadas='+ordenados[z]["geoposicionament"][0]['geoposicionament1']['lat']+','+ordenados[z]["geoposicionament"][0]['geoposicionament1'].long+'&direccion='+ordenados[z]["geoposicionament"][0]['geoposicionament1'].address+'&telefono='+ordenados[z]["contacte"].telf+'&email='+ordenados[z]["contacte"].email+'&horariolv='+ordenados[z]["horari"]["di"][0]["in"]+','+ordenados[z]["horari"]["di"][0]["out"]+'&horariosb='+ordenados[z]["horari"]["ds"][0]["in"]+','+ordenados[z]["horari"]["ds"][0]["out"]+'&horariodm='+ordenados[z]["horari"]["dg"][0]["in"]+','+ordenados[z]["horari"]["dg"][0]["out"]+'&foto='+ordenados[z]['imatges'][0]+','+ ordenados[z]['imatges'][1]);    
-  
-       }//fin for z
-        if(ordenados.length>3){
-            document.getElementsByClassName('container thumbs')[0].
-            getElementsByTagName('a')[3].style.visibility='visible';
-            }
-  
-        resultadoBusqueda=ordenados;
-        } //cierre else
-    }
-  });
-//-------------------------------------------------------------------
-$('form').submit(function(e){
-  e.preventDefault(e); //anular evento de form cuando se envia con buscar
-  });
-//------------
-function borrarTiendasDebajodefila1(){
-var y=0;
-var padre=document.getElementsByClassName('containerTiendas')[0];
-var Hijos=document.getElementsByClassName('container thumbs');
-var Hijo='';
-for(y=1;y<Hijos.length;y++){
-Hijo=Hijos[y];
-padre.removeChild(Hijo);  
-  }
-  }
-//---------
-//boton buscar
-$('#buscarId').click(function(){ //En jquery el id se identifica con #
-  resultadoBusqueda=[]; //reinicio array para siguiente busqueda
-  var listaServicios=document.getElementById('list-types'); //coge los servicios disponibles en el desplegable
-  var listaPoblaciones=document.getElementById('select-city');
-  var listaValoracion=document.getElementById('offer-types');
-  var listaOrdenar=document.getElementById('ordenId');
-  var servicioElegido=''; //variable que guardará la opción escogida por usuario
-  var poblacionElegida='';
-  var valoracionElegida='';
-  var ordenElegido='';
-  var longitud=0; //longitud del vector de jsons
-  var i=0,c=0,x=0;
-  var lat=0,long=0;//variables con latitud y longitud para mapa
-  var tiendas=''; //para modificar resultados de la busqueda
-  var nombreTienda='',valoracion='',descripcion='',precio='',fotoTienda=''; //variables para resultados
-  var direccion='',telefono='',email='',horariolvin='',horariolvout='',horariosbin='',horariosbout='',horariodmin='',horariodmout='';
-  var botonesDetalles=''; //boton detalles verde que nos lleva a la tienda en concreto
-  var serviciosEnjson='',poblacionesEnJson=''; //vector con resultado de servicios, poblaciones...por separado
-  var busquedaCoincidente=false; //es correcto cuando la busqueda coincide con el servicio del json
-  var valoracion1=0,valoracion2=0; //variables para separar las valoraciones 3-4
-  servicioElegido=listaServicios.value;
-  poblacionElegida=listaPoblaciones.value;
-  valoracionElegida=listaValoracion.value;
-  ordenElegido=listaOrdenar.value; // recoger opcion elegida por usuario
-  longitud=contenidoJson.length; // obtener la longitud del vector
-  //reiniciar contadores y vectores
-  ordenados=[];
-  resultadoBusqueda=[];
-  borrarTiendasDebajodefila1();
-  ultimaPosicionAgregada=0;
-  numeroFilaTiendas=0;
-
-  for(i=0;i<longitud;i++){ //recorrer todos las tiendas del json para buscar coincidencias de la busqueda
-  serviciosEnjson=contenidoJson[i]['dadesPropies']['servicios']; //array con todos los servicios que hay en todas las tiendas
-  poblacionesEnJson=contenidoJson[i]['geoposicionament'];
-  servicioElegido=servicioElegido.toLowerCase();//a minusculas
-  //para que no haya problemas con mayusculas y minusculas
-  for(x=0;x<serviciosEnjson.length;x++){
-      serviciosEnjson[x]=serviciosEnjson[x].toLowerCase();
-  }
-  
-  if(serviciosEnjson.includes(servicioElegido)==true){ //si el servicio buscado está en alguna tienda
-    for(c=0;c<poblacionesEnJson.length;c++){ //miramos si la población está en alguna tienda
-      if(poblacionesEnJson[c]['geoposicionament'+String(c+1)]['city']==poblacionElegida){
-      busquedaCoincidente=true;  
-      break; //cuando coincida no hace falta buscar más
-      }//cierre if poblacion   
-    }//cierre for c poblaciones(puede haber más de una sucursal en Mallorca)
-    if(busquedaCoincidente==true){ //y finalmente miramos la valoracion elegida (solo hay una opción por tienda)
-      busquedaCoincidente=false; //dejamos preparado para siguiente busqueda
-      valoracion1=valoracionElegida.split('-')[0]; //separamos los numeros (3-4)
-      valoracion2=valoracionElegida.split('-')[1];
-      if(contenidoJson[i]['dadesPropies']['valoracio']==valoracion1 || contenidoJson[i]['dadesPropies']['valoracio']==valoracion2){
-        resultadoBusqueda.push(contenidoJson[i]); //y metemos en resultados las tiendas encontradas que coincidan con la busqueda elegida
-        }
-
-      } //cierre if coincidencia
-  }//cierre if includes
-    
-  if(contenidoJson[i]['tipus']){
-    
-    }//cierre if   
-    }//cierre for i
-         if(resultadoBusqueda.length==0){ //si no ha encontrado ninguna tienda
-         
-        alert("No hay resultados para esta búsqueda");
-         document.getElementsByClassName('container thumbs')[0].
-  style.visibility='hidden';
-          }else{ //si resultados
-          document.getElementsByClassName('container thumbs')[0].
-  style.visibility='visible';
-    //hacer visibles todas ñas tiendas
-  for(x=0;x<3;x++){
-    document.getElementsByClassName('container thumbs')[0].
-            getElementsByClassName('col-sm-6 col-md-4')[x].
-            style.visibility='visible';
-  }
-          tiendas=document.getElementsByClassName('col-sm-6 col-md-4'); //indicamos clase donde salen resultados
-          botonesDetalles=document.getElementsByClassName('btn btn-success'); //indicamos clase del boton detalles verde
-          //recorremos todas las tiendas que han salido como resultados
-          
-          if(resultadoBusqueda.length>3){
-            document.getElementsByClassName('container thumbs')[0].
-            getElementsByTagName('a')[3].style.visibility='visible';
-            }
-            
-              if(resultadoBusqueda.length<3){
-            for(x=resultadoBusqueda.length;x<3;x++){
-            document.getElementsByClassName('container thumbs')[0].
-            getElementsByClassName('col-sm-6 col-md-4')[x].
-            style.visibility='hidden';
-            }
-              }
-          //for(c=0;c<resultadoBusqueda.length;c++){
-          for(c=0;c<3;c++){
-            //cogemos info Json de cada tienda
-            fotoTienda= resultadoBusqueda[c]['imatges'][0]; //foto portada
-            fotoTienda2= resultadoBusqueda[c]['imatges'][1];
-            nombreTienda=resultadoBusqueda[c]['nom']; //nombre tienda
-            descripcion=resultadoBusqueda[c]['descripcio']; //descripcion
-            valoracion=resultadoBusqueda[c]['dadesPropies']['valoracio']; //valoracion
-            precio=resultadoBusqueda[c]['preu']['import']; //precio
-            long=resultadoBusqueda[c]["geoposicionament"][0]['geoposicionament1']['long'];            
-            lat=resultadoBusqueda[c]["geoposicionament"][0]['geoposicionament1']['lat'];
-            direccion=resultadoBusqueda[c]["geoposicionament"][0]['geoposicionament1']['address'];
-            telefono=resultadoBusqueda[c]["contacte"]["telf"];
-            email=resultadoBusqueda[c]["contacte"]["email"];
-            horariolvin=resultadoBusqueda[c]["horari"]["di"][0]["in"];
-            horariolvout=resultadoBusqueda[c]["horari"]["di"][0]["out"];
-            horariosbin=resultadoBusqueda[c]["horari"]["ds"][0]["in"];
-            horariosbout=resultadoBusqueda[c]["horari"]["ds"][0]["out"];
-            horariodmin=resultadoBusqueda[c]["horari"]["dg"][0]["in"];
-            horariodmout=resultadoBusqueda[c]["horari"]["dg"][0]["out"];
-            //llegamos hasta el 'div' del html que nos interesa poner la info
-            tiendas[c].childNodes[1].childNodes[1].setAttribute('src',fotoTienda);
-            tiendas[c].childNodes[1].childNodes[3].childNodes[1].innerHTML=nombreTienda;
-            tiendas[c].childNodes[1].childNodes[3].childNodes[3].childNodes[0].innerHTML=descripcion;
-            tiendas[c].childNodes[1].childNodes[3].childNodes[6].setAttribute('src','img/'+valoracion+
-            'estrella.png');
-            cantiDadEuros=''; //inicializar variable
-            for(x=1;x<=precio;x++){ //segun cantidad importe, cantidad de simbolos euro
-            cantiDadEuros=cantiDadEuros+'€';  
-              }         
-            tiendas[c].childNodes[1].childNodes[3].childNodes[9].childNodes[0].innerHTML=cantiDadEuros; //cantidad euros
-            //al darle al boton detalles de una tienda, pasamos sus parametros concretos por url a tiendas.html
-            botonesDetalles[c+1].setAttribute('href','tienda.html?name='+nombreTienda+'&descripcion='+descripcion+'&coordenadas='+lat+','+long+'&direccion='+direccion
-            +'&telefono='+telefono+'&email='+email+'&horariolv='+horariolvin+','+horariolvout+'&horariosb='+horariosbin+','+horariosbout+'&horariodm='+horariodmin+','+horariodmout+'&foto='+fotoTienda+','+fotoTienda2);
-            }//fin for
-            ultimaPosicionAgregada=2;//added
-            console.log('ultima posicion');
-            }         
-
-  
-  }); //evento click con jquery una vez dado a botón 'buscar'
-
-//mousemove
-var contenedor='';
-var filaTrestiendas='';
-var copia='';
-var numeroFilaTiendas=0;
-var posicionInicial=0,posicionFinal=0;
-var tmp=0;
-var tiendasFila='';
-//copiar fila con las tiendas
-function copiatienda(control){
-  numeroFilaTiendas++;
-  posicionInicial=ultimaPosicionAgregada+1;
-  posicionFinal=posicionInicial+2;
-  
-  if(posicionInicial<=resultadoBusqueda.length-1){
-  if(posicionFinal>resultadoBusqueda.length-1){
-    posicionFinal=resultadoBusqueda.length-1;
-    }
-  contenedor=document.getElementsByClassName('containerTiendas')[0];
-console.log(numeroFilaTiendas);
-filaTrestiendas=document.getElementsByClassName
-('container thumbs')[numeroFilaTiendas-1];
-//filaTrestiendas.setAttribute('class','container thumbs'+numeroFilaTiendas);
-copia=filaTrestiendas.cloneNode(true);
-//colocar ancla
-copia.setAttribute('id','tiendas'+numeroFilaTiendas);
-tmp=posicionFinal+1;
-//tiendasFila=copia.getElementsByClassName('col-sm-6 col-md-4');
-
-
-
-if(posicionFinal-posicionInicial!=2){
-while(tmp<=posicionInicial+2){
-tiendasFila=copia.getElementsByClassName('col-sm-6 col-md-4');
-  
-  copia.removeChild(tiendasFila[tiendasFila.length-1] );
-  console.log('tmp '+tmp+',pos '+posicionInicial+'='+
-  (tmp-posicionInicial));
-  
-  tmp++;
-  }
-}//fin de if resta posiciones
-tmp=posicionInicial;
-tiendasFila=copia.getElementsByClassName('col-sm-6 col-md-4');
-while(tmp<=posicionFinal){
-  //nombre
-  tiendasFila[tmp-posicionInicial].childNodes[1].
-  childNodes[3].childNodes[1].innerHTML=resultadoBusqueda[tmp]['nom'];
-  
-  //foto tienda
-  tiendasFila[tmp-posicionInicial].childNodes[1].
-  childNodes[1].setAttribute('src',
-  resultadoBusqueda[tmp]['imatges'][0]);
-  
-   //descripcion  
-  tiendasFila[tmp-posicionInicial].childNodes[1].childNodes[3].
-  childNodes[3].childNodes[0].innerHTML=resultadoBusqueda[tmp]['descripcio'];
-  
-  
-   //valoracion
-  
-  tiendasFila[tmp-posicionInicial].childNodes[1].childNodes[3].
-  childNodes[6].setAttribute('src','img/'+
-  resultadoBusqueda[tmp]['dadesPropies']['valoracio']+
-            'estrella.png');
-   //precio
-  
-  cantiDadEuros=''; //inicializar variable
-            for(x=1;x<=parseInt(resultadoBusqueda[tmp]['preu']['import']);x++){ //segun cantidad importe, cantidad de simbolos euro
-            cantiDadEuros=cantiDadEuros+'€';  
-              }         
-  
-  
-  
-  tiendasFila[tmp-posicionInicial].childNodes[1].childNodes[3].
-  childNodes[9].childNodes[0].innerHTML=cantiDadEuros; //cantidad euros
-  
-  
-  tiendasFila[tmp-posicionInicial].childNodes[1].childNodes[3].
-  childNodes[11].childNodes[1].setAttribute('href','tienda.html?name='+resultadoBusqueda[tmp].nom+'&descripcion='+resultadoBusqueda[tmp]['descripcio']+'&coordenadas='+resultadoBusqueda[tmp]["geoposicionament"][0]['geoposicionament1']['lat']+','+resultadoBusqueda[tmp]["geoposicionament"][0]['geoposicionament1'].long+'&direccion='+resultadoBusqueda[tmp]["geoposicionament"][0]['geoposicionament1'].address+'&telefono='+resultadoBusqueda[tmp]["contacte"].telf+'&email='+resultadoBusqueda[tmp]["contacte"].email+'&horariolv='+resultadoBusqueda[tmp]["horari"]["di"][0]["in"]+','+resultadoBusqueda[tmp]["horari"]["di"][0]["out"]+'&horariosb='+resultadoBusqueda[tmp]["horari"]["ds"][0]["in"]+','+resultadoBusqueda[tmp]["horari"]["ds"][0]["out"]+'&horariodm='+resultadoBusqueda[tmp]["horari"]["dg"][0]["in"]+','+resultadoBusqueda[tmp]["horari"]["dg"][0]["out"]+'&foto='+resultadoBusqueda[tmp]['imatges'][0]+','+ resultadoBusqueda[tmp]['imatges'][1]); 
-  
-  
-
-  tmp++;
-  }//cierre de while
-
-if (tmp>=resultadoBusqueda.length-1){
-  
-  copia.getElementsByTagName('a')
-  [copia.getElementsByTagName('a').length-1].style.visibility='hidden';
-
-  }
-
-
-contenedor.appendChild(copia);
-document.location.href='#'+copia.id;
-
-  }
-  ultimaPosicionAgregada=posicionFinal;
-
-  control.style.visibility='hidden';
-  }
-
-  
-function appDog(){
-const BREEDS_URL = 'https://dog.ceo/api/breeds/list/all';
-
-const select = document.querySelector('.breeds');
-
-
-fetch(BREEDS_URL)
-  .then(res => {
-    return res.json();
-  })
-  .then(data => {
-    const breedsObject = data.message;
-    const breedsArray = Object.keys(breedsObject);
-    for (let i = 0; i < breedsArray.length; i++) {
-      const option = document.createElement('option');
-      option.value = breedsArray[i];
-      option.innerText = breedsArray[i];
-      select.appendChild(option);
-    }
-    console.log(breedsArray);
-  });
-
-select.addEventListener('change', e => {
-  let url = `https://dog.ceo/api/breed/${e.target.value}/images/random`;
-  getDoggo(url);
-});
-
-const img = document.querySelector('.dog-img');
-const spinner = document.querySelector('.spinner');
-
-const getDoggo = url => {
-  spinner.classList.add('show');
-  img.classList.remove('show');
-  fetch(url)
-    .then(res => {
-      return res.json();
-    })
-    .then(data => {
-      img.src = data.message;
-    });
-};
-
-img.addEventListener('load', () => {
-  spinner.classList.remove('show');
-  img.classList.add('show');
-});
-
-}
-
-</script>
-
-  </body>
+</body>
 </html>
