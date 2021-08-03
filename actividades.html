@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Pet Shops</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ficheros css (revisar para juntarlo todo en 1) -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Duru+Sans|Actor' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+  </head>
+  <body>
+  <!--https://calasdemallorca.netlify.app/_json/datos.json-->
+  
+  <iframe id="contenidoJsonCalas" width="350" height="250" style="display:none" src="https://mallorca-animals-tm.neocities.org/JSON/calas.json">
+  </iframe>
+    <iframe id="contenidoJsonAct" width="350" height="250" style="display:none" src="https://mallorca-animals-tm.neocities.org/JSON/actividades.json"></iframe>
+    <iframe id="contenidoDelJson" width="350" height="250" style="display:none" src="https://mallorca-animals-tm.neocities.org/JSON/tiendas.json"></iframe>
+    <!-- Barra de navegación en cabecera-->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <img src='https://mallorca-animals-tm.neocities.org/img/Paw_Print.svg' width='40px'>
+          <!-- Logotipo a la izq. Si clickas sobre él vuelve a home-->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar" href="index.html"></span>
+            <span class="icon-bar" href="index.html"></span>
+            <span class="icon-bar" href="index.html"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><span class="green">Pet</span> Shops</a>
+        </div>
+        <!-- Titulos menus derecha-->
+        <nav role="navigation" class="collapse navbar-collapse navbar-right">
+          <ul class="navbar-nav nav">
+          <!-- Página principal "home"-->
+            <li class="active"><a href="index.html">Home</a></li>
+            <!-- Desplegable para poder ir directamente a 3 tiendas (las más importante p.e.)-->
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Tiendas Destacadas<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Tienda 1</a></li>
+                <li><a href="#">Tienda 2</a></li>
+                <li><a href="#">Tienda 3</a></li>
+              </ul>
+            </li>
+            <!-- menú para ir a página búsqueda veterinarios o tema relacionado animales de otro grupo-->
+            <li><a href="actividades.html">Actividades</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="jumbotron">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Cantidad de slides -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <!-- Imagenes de las slides -->
+          <div class="carousel-inner">
+          <div class="item active">
+            <img src="img/perroplaya.jpg" alt="">
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/perroplaya2.jpg" alt="">
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/perroplaya3.jpg" alt="">
+            <div class="carousel-caption">
+            </div>
+          </div>
+        </div>
+        <!-- Controles del carousel (flechas y circulitos para cambiar foto) -->
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+    
+  
+    <!-- Thumbnails -->
+    <div class="container thumbs" id='containerCalasId'>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="img/tiendaanimal.jpg" alt="" class="img-circle">
+          <div class="caption">
+            <h2 class="text-center">Tienda Animal</h2>
+            <p><FONT SIZE=2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</font></p>
+          </div>
+          <div type="submit" id="detalles" class="btn-toolbar text-center btn btn-success" 
+          data-toggle="modal" data-target="#miModal" onclick="cambiarClima(this);">
+              Detalles
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- prefooter -->
+
+    <!--<br>
+    <div class="text-center"><img src="img/redes.png"></div> -->
+    
+    <!-- Footer -->
+    <div class="footer text-center">
+    <!-- Facebook -->
+<a style="color: #3b5998;" href="http://facebook.es" role="button"
+  ><i class="fab fa-facebook-f fa-3x"></i
+></a>
+
+<!-- Twitter -->
+<a style="color: #55acee;" href="http://twitter.es" role="button"
+  ><i class="fab fa-twitter fa-3x"></i
+></a>
+
+<!-- Google -->
+<a style="color: #dd4b39;" href="http://google.es" role="button"
+  ><i class="fab fa-google fa-3x"></i
+></a>
+
+<!-- Instagram -->
+<a style="color: #ac2bac;" href="http://instagram.com" role="button"
+  ><i class="fab fa-instagram fa-3x"></i
+></a>
+        <p>&copy; 2021 Pet Shops. All Rights Reserved. Proudly created by <a class="green" href="https://mallorca-animals-tm.neocities.org">Grupo10.com</a></p>
+    </div>
+    <!-- Modal -->
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header" style="font-size: 30px">
+				<h5 class="modal-title" id="myModalLabel" ><strong></strong></h5>
+			</div>
+			<div class="modal-body">
+			 <img src="img/tiendaanimal2.jpg" width="350">
+			 <i id="temp" class="fas fa-sun fa-4x" style="margin-left: 50px"><h2></h2></i>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- // <script src="https://code.jquery.com/jquery.js"></script> -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/funcionesact.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+     <script src="js/core.min.js"></script>
+
+  </body>
+  
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="es">
+  <head>
+    
+    <title>Tienda</title>
+    
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800%7CPoppins:300,400,500,600,700%7CMuli:200,300,400,500">
+    
+    <link rel="stylesheet" href="css/bootstrap2.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/fonts.css"> arregla lo de las redes sociales-->
+    <link rel="stylesheet" href="css/style2.css">
+      
+    <!--<link rel="stylesheet" href="css/estilosJuntos.css">prueba-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/> <!-- mapbox-->
+
+
+  </head>
+  <body>
+  <!-- icono de espera de carga-->
+ <iframe id="contenidoDelJson" width="350" height="250" style="display:none" src="https://mallorca-animals-tm.neocities.org/JSON/tiendas.json"></iframe>
+    <div class="preloader" id="loading">
+      <div class="preloader-body">
+        <div id="loading-center-object">
+          <div class="object" id="object_four"></div>
+          <div class="object" id="object_three"></div>
+          <div class="object" id="object_two"></div>
+          <div class="object" id="object_one"></div>
+        </div>
+      </div>
+    </div>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+
+          <!-- Logotipo a la izq. Si clickas sobre él vuelve a home-->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div id="temporal"></div>
+          <a class="navbar-brand" href="index.html"><span class="green">Pet</span> Shops</a>
+          <img src='https://mallorca-animals-tm.neocities.org/img/Paw_Print.svg' width='40px'>
+        </div>
+        <!-- Titulos menus derecha-->
+        <nav role="navigation" class="collapse navbar-collapse navbar-right">
+          <ul class="navbar-nav nav">
+          <!-- Página principal "home"-->
+            <li class="active"><a href="index.html">Home</a></li>
+            <!-- Desplegable para poder ir directamente a 3 tiendas (las más importante p.e.)-->
+           <li class="dropdown">
+           <!--class="dropdown-toggle" onclick="return false;"-->
+           
+              <a  data-toggle="dropdown"  href="#p"  >Tiendas Destacadas<b class="caret"></b></a>
+              <!--class="dropdown-menu" -->
+              <ul class="dropdown-menu">
+               <li><a href="#">Tienda 1</a></li>
+                <li><a href="#">Tienda 2</a></li>
+                <li><a href="#">Tienda 3</a></li>
+              </ul>
+            </li>
+            <!-- menú para ir a página búsqueda veterinarios o tema relacionado animales de otro grupo-->
+            <li><a href="actividades.html">Actividades</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="page">
+      <!-- Foto cabecera-->
+      
+      <section class="breadcrumbs-custom">
+        <section class="parallax-container breadcrumbs-custom-main context-dark" data-parallax-img="img/tiendaanimal.jpg">
+          <div class="parallax-content">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-9">
+                  <h2 class="breadcrumbs-custom-title"></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="breadcrumbs-custom-aside">
+          <div class="container">
+            <ul class="breadcrumbs-custom-path">
+              <li><a href="index.html">Home</a></li>
+              <li class="active">Detalle</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section section-md">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-xl-5">
+              <div class="inset-1">
+                <h2>Tienda Animal</h2>
+                <span class="big">En nuestra tienda podrás encontrar todos los productos existentes en el mercado para tu mascota! 
+                También disponemos de peluquería canina en la misma tienda y la posibilidad de hacer un curso de adiestramiento gratuito! </span>
+                
+                    <!-- Carousel -->
+    <div class="jumbotron">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Cantidad de slides -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <!-- Imagenes de las slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="img/tiendaanimal1.jpg" alt="">
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/tiendaanimal2.jpg" alt="">
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="item">
+            <iframe src="https://drive.google.com/file/d/1C9pC6GS-BUO86Zcx9C1zlfUbtSDfnNOU/view?usp=sharing/preview" width="600" height="480"></iframe>
+            <video controls>
+              <source 
+            src="https://uibes-my.sharepoint.com/:v:/g/personal/pfs358_id_uib_es/EbRg2UW1F-xNiwsl2iIkOIcB8FQ9t7r06yx1RZnpBxZMLQ?e=U9nTP8" type="video/mp4">
+            </video>
+            
+
+            
+            </div>
+          </div>
+          
+          <!--<div class="item" style="position:relative;height:0;padding-bottom:56.28%"><iframe src="https://www.youtube.com/embed/B8_cMq2iG1g" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="encrypted-media" allowfullscreen></iframe></div>
+        </div>-->
+        <!-- Controles del carousel (flechas y circulitos para cambiar foto) -->
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+                <div class="row row-50" style="margin-left: 100px">
+                  <div class="col-sm-6 col-xl-12">
+                    <h3 class="heading-7">¿Dónde estamos?</h3>
+                    <ul class="list list-style-1">
+                      <li class="unit"><span><i class="glyphicon glyphicon-map-marker"></i></span>
+                        <div id="dire" class="unit-body">Carrer Sor de Catalina Maura, 14  07001 Palma</div>
+                      </li>
+                      <li class="unit"><span><i class="fa fa-phone"></i></span>
+                        <div id="telf" class="unit-body">971 748596</div>
+                      </li>
+                      <li class="unit"><span><i class="fa fa-envelope"></i></span>
+                        <div class="unit-body"><a id="email" class="text-primary" href="mailto:#">tiendaAnimalPalma@gmail.com</a></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6 col-xl-12">
+                    <h3 class="heading-7">Horario</h3>
+                    <ul class="list list-style-1">
+                      <li class="unit">
+                        <div id="lv" class="unit-body">Lunes a Viernes: 10:00 a 22:00</div>
+                      </li>
+                      <li class="unit">
+                        <div id="sb" class="unit-body">Sábados: 10:00 a 22:00</div>
+                      </li>
+                      <li class="unit">
+                        <div id="dm" class="unit-body">Domingos: 10:30 a 21:00</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="mapId" style="width:1200px;height:250px;z-index:-1"></div>
+                   </div> 
+                   
+                   <ul id="lista_comentarios" style="margin-top:35px;">
+                    </ul>
+              </div>
+            </div>                                    
+          </div>
+        </div>
+      </section>
+      <!-- Get in Touch-->
+      
+       <section class="section section-md bg-gray-100">
+        <div class="container">
+        <h3 class="text-center">Deja un Comentario</h3>
+          <div class="row justify-content-center">
+            <div class="col-lg-11 col-xl-9">
+              <!-- RD Mailform-->
+              <form class="rd-mailform rd-form">
+                <div class="row row-x-16 row-20">
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <input v-model="nombre" class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                      <label class="form-label" for="contact-name">Nombre</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <input v-model="email" class="form-input" id="contact-email" type="email" name="email" data-constraints="@Required @Email">
+                      <label class="form-label" for="contact-email">Email</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <label class="form-label" for="contact-message">Mensaje</label>
+                      <textarea v-model="comentario" class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <input v-model="telefono" class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@PhoneNumber">
+                      <label class="form-label" for="contact-phone">Teléfono</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap form-button">
+                      <button id="botonFormId" class="button button-block button-primary" type="submit" v-on:click.prevent='enviarComentario'>Enviar Mensaje</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page Footer-->
+
+          <div class="footer text-center">
+          <!-- Facebook -->
+<a style="color: #3b5998;" href="http://facebook.es" role="button"
+  ><i class="fab fa-facebook-f fa-3x"></i
+></a>
+
+<!-- Twitter -->
+<a style="color: #55acee;" href="http://twitter.es" role="button"
+  ><i class="fab fa-twitter fa-3x"></i
+></a>
+
+<!-- Google -->
+<a style="color: #dd4b39;" href="http://google.es" role="button"
+  ><i class="fab fa-google fa-3x"></i
+></a>
+
+<!-- Instagram -->
+<a style="color: #ac2bac;" href="http://instagram.com" role="button"
+  ><i class="fab fa-instagram fa-3x"></i
+></a>
+        <p>&copy; 2021 Pet Shops. All Rights Reserved. Proudly created by <a class="green" href="https://mallorca-animals-tm.neocities.org">Grupo10.com</a></p>
+    </div>
+    </div>
+        <script src="js/core.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/core.min.js"></script>
+        <script src="js/script.js"></script> 
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+        <!-- mapbox-->
+
+<script>
+var datosTienda='',nombreTienda='',coordenadas='',direccion='',descripcion='',telefono='',email='', horariolv='',horariosb='',horariodm='',foto='',contador=0,contenidoJson='';
+let comentarios = [];
+var ordenMejores=[];
+
+const valores = window.location.search
+const urlParams = new URLSearchParams(valores);
+var tienda_name = urlParams.get('name');
+
+var urlCompleta=window.location.href; //cogemos parametros en url
+window.onload=function(){ //Detecta cuando la ventana terminó de cargar todo el html
+datosTienda=urlCompleta.split('?')[1]; // a partir del ? vienen los datos
+nombreTienda=datosTienda.split('&')[0]; //cada dato separado por &
+descripcion=datosTienda.split('&')[1]
+coordenadas=datosTienda.split('&')[2];
+direccion=datosTienda.split('&')[3];
+telefono=datosTienda.split('&')[4];
+email=datosTienda.split('&')[5];
+horariolv=datosTienda.split('&')[6];
+horariosb=datosTienda.split('&')[7];
+horariodm=datosTienda.split('&')[8];
+foto=datosTienda.split('&')[9];
+
+nombreTienda=nombreTienda.replace('name=',''); //quitar la parte de "variable=" para coger solo datos
+descripcion=descripcion.replace('descripcion=','');
+coordenadas=coordenadas.replace('coordenadas=','');
+direccion=direccion.replace('direccion=','');
+telefono=telefono.replace('telefono=','');
+email=email.replace('email=','');
+horariolv=horariolv.replace('horariolv=','');
+horariosb=horariosb.replace('horariosb=','');
+horariodm=horariodm.replace('horariodm=','');
+foto=foto.replace('foto=','');
+
+while(nombreTienda.indexOf('%20')!=-1){
+nombreTienda=nombreTienda.replace('%20',' ');  //quitar el %20 y poner espacios
+  }
+while(direccion.indexOf('%20')!=-1){
+direccion=direccion.replace('%20',' ');  
+  }
+while(telefono.indexOf('%20')!=-1){
+telefono=telefono.replace('%20',' ');  
+  }
+while(descripcion.indexOf('%20')!=-1){
+descripcion=descripcion.replace('%20',' ');  
+  }
+
+//asignar nombre que corresponde
+document.getElementsByTagName('h2')[1].innerHTML=nombreTienda;
+document.getElementsByClassName('big')[0].innerHTML=descripcion;
+document.getElementById('dire').innerHTML=direccion;
+document.getElementById('telf').innerHTML=telefono;
+document.getElementById('email').innerHTML=email;
+document.getElementById('lv').innerHTML="Lunes a Viernes:    "+horariolv.split(',')[0]+" - "+horariolv.split(',')[1];
+document.getElementById('sb').innerHTML="Sabado:    "+horariosb.split(',')[0]+" - "+horariosb.split(',')[1];
+document.getElementById('dm').innerHTML="Domingo:    "+horariodm.split(',')[0]+" - "+horariodm.split(',')[1];
+document.getElementsByClassName('parallax-container breadcrumbs-custom-main context-dark')[0].childNodes[0].childNodes[0].setAttribute('src',foto.split(',')[0]);
+document.getElementsByClassName('carousel-inner')[0].childNodes[1].childNodes[1].setAttribute('src',foto.split(',')[0]);
+document.getElementsByClassName('carousel-inner')[0].childNodes[3].childNodes[1].setAttribute('src',foto.split(',')[1]);
+
+
+var mymap = L.map('mapId').setView([coordenadas.split(',')[0],
+coordenadas.split(',')[1]], 13);
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoicmFmYTJzMXMiLCJhIjoiY2tvOW1sMDFkMDFwejJvbjI5aGo3eDNqOSJ9.zCOQglS0PB2WEuExvJtorw' //mi token de mapbox
+}).addTo(mymap);
+var elContenido=extraeContenidoDeFrame();
+contenidoJson=JSON.parse(elContenido);
+tresMejoresTiendas();
+}
+
+function extraeContenidoDeFrame(){ //definicion
+var miFrame=document.getElementById("contenidoDelJson");
+var contenido=miFrame.contentWindow.document.body.innerText;
+return contenido;
+}
+
+function anularEnvio(control){
+  //{e => e.preventDefault()}
+   control.preventDefault();
+  }
+
+
+$(document).ready(function () {
+    
+    checkSession();
+    printList()
+    /*Tomar la fecha actual. Esto tienes que agergarlo a cada cometnario*/
+    const mes = new Date().getMonth()+1
+    const dia=new Date().getDate()
+    const anho=new Date().getFullYear()
+    //$('#fecha').text(dia+'/'+mes+'/'+anho)
+
+    $('#botonFormId').click(function (e) {
+        e.preventDefault()
+        let nombre = $('#contact-name').val();
+        let email = $('#contact-email').val();
+        let telefono = $('#contact-phone').val();
+        let comentario = $('#contact-message').val();
+
+        let validated = validateForm(nombre, email, comentario)
+
+        if (validated) {
+            saveComent(nombre, email, telefono, comentario)
+            addLast(nombre, email, telefono, comentario)
+        } else
+            alert('Debe completar todos los datos para poder enviar el comentario')
+
+    })
+
+})
+
+function saveComent(nombre, email, telefono, comentario) {
+    comentarios.push({
+        nombre,
+        email,
+        telefono,
+        comentario
+    })
+    window.localStorage.setItem(tienda_name, JSON.stringify(comentarios));
+}
+
+function addLast(nombre, email, telefono, comentario) {
+    var lista = document.getElementById("lista_comentarios");
+    var linew = document.createElement("li");
+        var img = document.createElement("img"); 
+        var nom = document.createElement("h4");
+        var com = document.createElement("p");
+        lista.appendChild(linew);
+        linew.appendChild(img);
+        linew.appendChild(nom);
+        linew.appendChild(com);
+
+        var nomb = document.createTextNode(nombre);
+        var coment = document.createTextNode(comentario);
+        var emai = document.createTextNode(email);
+        
+        nom.appendChild(nomb);
+        com.appendChild(coment);
+        img.setAttribute('src', 'https://i.imgur.com/CFpa3nK.jpg');
+        img.setAttribute('class', 'rounded-circle');
+        img.setAttribute('height', '40px');
+        img.setAttribute('width', '40px');
+}
+
+function checkSession() {
+    if (window.localStorage.getItem(tienda_name) == null) {
+        window.localStorage.setItem(tienda_name, JSON.stringify(comentarios));
+    } else {
+        comentarios = JSON.parse(window.localStorage.getItem(tienda_name))
+    }
+}
+
+function validateForm(nombre, email, telefono, comentario) {
+    if (nombre == '' || email == '' || comentario == '')
+        return false
+    return true
+}
+
+function printList() {
+    var lista = document.getElementById("lista_comentarios");
+    comentarios.forEach(function (data, index) {
+        var linew = document.createElement("li");
+        var img = document.createElement("img"); 
+        var nom = document.createElement("h4");
+        var com = document.createElement("p");
+        lista.appendChild(linew);
+        linew.appendChild(img);
+        linew.appendChild(nom);
+        linew.appendChild(com);
+
+        var nombre = document.createTextNode(data.nombre);
+        var comentario = document.createTextNode(data.comentario);
+        var email = document.createTextNode(data.email);
+        
+        nom.appendChild(nombre);
+        com.appendChild(comentario);
+        img.setAttribute('src', 'https://i.imgur.com/CFpa3nK.jpg');
+        img.setAttribute('class', 'rounded-circle');
+        img.setAttribute('height', '40px');
+        img.setAttribute('width', '40px');
+
+
+    })
+}
+
+//------
+function tresMejoresTiendas(){ //definicion
+var mejor=document.getElementsByClassName('dropdown-menu');
+ordenMejores.push(contenidoJson[0]); //del conjunto resultante de la busqueda, ordenamos por precio
+var elimina=ordenMejores[0]['nom']; //quitar el de referencia para que no se repita en el array ordenado
+var x=0,y=0;
+for(y=0;y<contenidoJson.length;y++){ //con referencia el primer resultado, 
+          // vamos mirando la valoracion de los que van llegando y se van comparando para ordenarlo
+  for(x=0;x<ordenMejores.length;x++){
+    if(parseInt(contenidoJson[y]['dadesPropies']['valoracio'])>=parseInt(ordenMejores[x]['dadesPropies']['valoracio'])){
+     ordenMejores.splice(x,0,contenidoJson[y]); //en el indice c, borramos 0 info, metemos la valoracion nueva
+     break;
+     }
+     }//cierre for c
+     if(x>=ordenMejores.length){ //si no es mÃ¡s grande que ninguno, se pondrÃ¡ al final del array
+      ordenMejores.push(contenidoJson[y]);
+      }
+      }//cierre for i
+      for(y=0;y<ordenMejores.length;y++){
+      if(ordenMejores[y]['nom']==elimina){
+      ordenMejores.splice(y,1); //borramos la tienda repetida de referencia
+      break;
+                }
+              }
+        var nombreTienda1=ordenMejores[0]['nom']; //nombre tienda
+        var nombreTienda2=ordenMejores[1]['nom'];
+        var nombreTienda3=ordenMejores[2]['nom'];
+        
+mejor[0].childNodes[1].childNodes[0].innerText=nombreTienda1;
+mejor[0].childNodes[3].childNodes[0].innerText=nombreTienda2;
+mejor[0].childNodes[5].childNodes[0].innerText=nombreTienda3;
+            //descripcion=ordenMejores[c]['descripcio']; //descripcion
+mejor[0].childNodes[1].childNodes[0].setAttribute('href','tienda.html?name='+ordenMejores[0]['nom']+'&descripcion='+ordenMejores[0]['descripcio']+'&coordenadas='+ordenMejores[0]["geoposicionament"][0]['geoposicionament1']['lat']+','+ordenMejores[0]["geoposicionament"][0]['geoposicionament1']['long']+'&direccion='+ordenMejores[0]["geoposicionament"][0]['geoposicionament1']['address']+'&telefono='+ordenMejores[0]["contacte"]["telf"]+'&email='+ordenMejores[0]["contacte"]["email"]+'&horariolv='+ordenMejores[0]["horari"]["di"][0]["in"]+','+ordenMejores[0]["horari"]["di"][0]["out"]+'&horariosb='+ordenMejores[0]["horari"]["ds"][0]["in"]+','+ordenMejores[0]["horari"]["ds"][0]["out"]+'&horariodm='+ordenMejores[0]["horari"]["dg"][0]["in"]+','+ordenMejores[0]["horari"]["dg"][0]["out"]+'&foto='+ordenMejores[0]['imatges'][0]+','+ ordenMejores[0]['imatges'][1]);
+mejor[0].childNodes[3].childNodes[0].setAttribute('href','tienda.html?name='+ordenMejores[1].nom+'&descripcion='+ordenMejores[1]['descripcio']+'&coordenadas='+ordenMejores[1]["geoposicionament"][0]['geoposicionament1']['lat']+','+ordenMejores[1]["geoposicionament"][0]['geoposicionament1'].long+'&direccion='+ordenMejores[1]["geoposicionament"][0]['geoposicionament1'].address+'&telefono='+ordenMejores[1]["contacte"].telf+'&email='+ordenMejores[1]["contacte"].email+'&horariolv='+ordenMejores[1]["horari"]["di"][0]["in"]+','+ordenMejores[1]["horari"]["di"][0]["out"]+'&horariosb='+ordenMejores[1]["horari"]["ds"][0]["in"]+','+ordenMejores[1]["horari"]["ds"][0]["out"]+'&horariodm='+ordenMejores[1]["horari"]["dg"][0]["in"]+','+ordenMejores[1]["horari"]["dg"][0]["out"]+'&foto='+ordenMejores[1]['imatges'][0]+','+ ordenMejores[1]['imatges'][1]);
+mejor[0].childNodes[5].childNodes[0].setAttribute('href','tienda.html?name='+ordenMejores[2].nom+'&descripcion='+ordenMejores[2]['descripcio']+'&coordenadas='+ordenMejores[2]["geoposicionament"][0]['geoposicionament1']['lat']+','+ordenMejores[2]["geoposicionament"][0]['geoposicionament1'].long+'&direccion='+ordenMejores[2]["geoposicionament"][0]['geoposicionament1'].address+'&telefono='+ordenMejores[2]["contacte"].telf+'&email='+ordenMejores[2]["contacte"].email+'&horariolv='+ordenMejores[2]["horari"]["di"][0]["in"]+','+ordenMejores[2]["horari"]["di"][0]["out"]+'&horariosb='+ordenMejores[2]["horari"]["ds"][0]["in"]+','+ordenMejores[2]["horari"]["ds"][0]["out"]+'&horariodm='+ordenMejores[2]["horari"]["dg"][0]["in"]+','+ordenMejores[2]["horari"]["dg"][0]["out"]+'&foto='+ordenMejores[2]['imatges'][0]+','+ ordenMejores[2]['imatges'][1]);
+}
+</script>
+
+  </body>
+</html>
